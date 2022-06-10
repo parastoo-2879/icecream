@@ -29,15 +29,15 @@ header > .menu {
   position: absolute;
   height: 100vh;
   width: 20%;
-  background-color: #434343;
-  opacity: 0;
-  visibility: hidden;
+  background-color: #e7dede;
+  left: -20%;
+  top: 0;
   transition: 0.4s;
 }
 header > .menu > .close {
   position: absolute;
   z-index: 2;
-  color: #fff;
+  color: red;
   font-size: 1.5rem;
   right: 10px;
   top: 5px;
@@ -47,8 +47,11 @@ header > .menu > ul > li > a {
   display: flex;
   justify-content: center;
   padding: 30px 0;
-  color: #fff;
+  color: palevioletred;
   font-size: 1.5rem;
+}
+header > .menu > ul > li:hover > a {
+  border-bottom: 2px dashed palevioletred;
 }
 header > .header-top > .logo {
   display: flex;
@@ -61,6 +64,11 @@ header > .header-top > .logo > figure {
 }
 header > .header-top > .logo > figure > img {
   width: 80px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+header > .header-top > .logo > figure > img:hover {
+  transform: rotate(360deg);
 }
 header > .header-top > .menu-icon {
   display: flex;
@@ -70,9 +78,10 @@ header > .header-top > .menu-icon {
   font-size: 25px;
   cursor: pointer;
 }
-header > .header-top > .menu-icon > i {
+
+/* header > .header-top > .menu-icon > i {
   cursor: pointer;
-}
+} */
 header > .header-pic {
   grid-row: 3 / span 18;
   background-image: url(img/Pink_BkgBlob.svg);
@@ -96,6 +105,7 @@ header > .header-pic > article > figure {
   align-items: center;
   grid-column: 3 / span 1;
 }
+
 header > .header-pic > article > figure > img {
   width: 550px;
   height: 550px;
@@ -148,6 +158,11 @@ main > section > h1 {
   align-items: center;
   font-size: 3rem;
   color: #f45151;
+  transition: 0.4s;
+  cursor: pointer;
+}
+main > section > h1:hover {
+  transform: translateX(20px);
 }
 main > section > p {
   grid-area: 3 / 1 / span 3 / span 1;
@@ -180,11 +195,20 @@ main > section > section.gallery-text {
   justify-content: center;
   flex-wrap: wrap;
   padding: 20px;
+  /* transition: 0.4s; */
+  cursor: pointer;
 }
 main > section > section.gallery-text > * {
   width: 80%;
   font-size: 1.5rem;
   color: #fff;
+  transition: 0.4s;
+}
+main > section > section.gallery-text > .material-symbols-outlined {
+  transform-origin: 1%;
+}
+main > section > section.gallery-text > .material-symbols-outlined:hover {
+  transform: rotate(360deg);
 }
 main > article {
   width: 100%;
@@ -218,6 +242,12 @@ main > article > div > section > span {
   padding: 15px;
   font-weight: bold;
   text-transform: uppercase;
+  transition: 0.4s;
+  cursor: pointer;
+}
+main > article > div > section > span:hover {
+  transform: translateX(30px);
+  color: #f45151;
 }
 main > article > div > section > h2 {
   font-size: 3rem;
@@ -284,6 +314,11 @@ main > article > div > section > h2 {
   position: absolute;
   left: 20%;
   top: 10%;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.child > .circle1:hover {
+  transform: translateY(20px);
 }
 .child > .circle2 {
   width: 100px;
@@ -293,6 +328,11 @@ main > article > div > section > h2 {
   position: absolute;
   left: 15%;
   top: 50%;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.child > .circle2:hover {
+  transform: translateX(20px);
 }
 .child > section {
   position: absolute;
@@ -325,11 +365,16 @@ main > article > div > section > h2 {
   border-radius: 50px;
   border: 1px solid #f45151;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
 }
+
 .child > section > button:hover {
   background-color: transparent;
   color: #f45151;
 }
+
 .gallery {
   width: 100%;
   height: 100vh;
@@ -340,6 +385,11 @@ main > article > div > section > h2 {
   text-transform: uppercase;
   color: #f45151;
   padding-bottom: 30px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.gallery > h2:hover {
+  transform: translateY(10px);
 }
 .gallery > section {
   width: 100%;
@@ -428,6 +478,10 @@ main > article > div > section > h2 {
   object-fit: cover;
   border-radius: 50%;
   border: 5px solid #ffbfb3;
+  transition: 0.4s;
+}
+.user > section > div > figure > img:hover {
+  transform: rotate(360deg);
 }
 .user > section > div > p {
   font-size: 18px;
